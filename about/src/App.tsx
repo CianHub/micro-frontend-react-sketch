@@ -1,8 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.scss";
 
-const App = () => (
+
+export const App = () => (
   <div className="text-3xl mx-auto max-w-6xl">
     <div className="text-center">
       <img
@@ -16,4 +16,3 @@ const App = () => (
   </div>
 );
 
-ReactDOM.render(<App />, document.getElementById("app"));
