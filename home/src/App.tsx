@@ -1,19 +1,11 @@
 import React from "react";
 import "./index.scss";
 import {createRoot} from 'react-dom/client';
-
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import {App as AboutApp} from "about/App";
+import {RouterProvider} from "react-router-dom";
+import {router} from "./router/router";
 
 const App = () => (
-  <div className="text-3xl mx-auto max-w-6xl">
-    <Header />
-    <div className="my-10">
-      <AboutApp />
-    </div>
-    <Footer />
-  </div>
+  <RouterProvider router={router} />
 );
 
 const container = document.getElementById('app');

@@ -5,3 +5,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.con {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-end;
+}
