@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 
 
-export const App = () => (
+const App = () => (
   <div className="text-3xl mx-auto max-w-6xl">
     <div className="text-center">
       <img
@@ -16,3 +16,4 @@ export const App = () => (
   </div>
 );
 
+export default App;

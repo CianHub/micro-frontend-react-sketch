@@ -1,11 +1,13 @@
-import React from "react";
+import React, {lazy} from "react";
 import "../index.scss";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {App as AboutApp} from "about/App";
 
-export const One = () => {
+const AboutApp = lazy(() => import("about/App"));
+
+
+const One = () => {
     return (
         <div className="text-3xl mx-auto max-w-6xl">
             <Header />
@@ -16,3 +18,5 @@ export const One = () => {
         </div>
     );
 };
+
+export default One;

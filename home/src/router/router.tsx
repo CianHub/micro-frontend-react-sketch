@@ -1,18 +1,25 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import {
     createHashRouter,
+    Navigate,
 } from "react-router-dom";
-import {One} from "../pages/one";
-import {Two} from "../pages/two";
+
+
+const One = lazy(() => import("../pages/one"));
+const Two = lazy(() => import("../pages/two"));
 
 export const router = createHashRouter([
 
     {
         path: "/two",
-        element: <Two />,
+        element: <Suspense fallback={<div>loading..</div>}> <Two /></Suspense>,
     }, {
-        path: "/",
-        element: <One />,
+        path: "/one",
+        element: <Suspense fallback={<div>loading..</div>}> <One /></Suspense>,
+    },
+    {
+        path: "*",
+        element: <Navigate to="/one" />,
     }
 ]);
 
